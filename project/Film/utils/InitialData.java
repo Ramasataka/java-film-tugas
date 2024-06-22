@@ -18,6 +18,7 @@ public class InitialData {
     private Map<String, List<Artis>> movieArtistsMap = new HashMap<>();
     private Map<String, Genre> dataGenre= new HashMap<>();
     private ArrayList<Pengguna> dataPengguna = new ArrayList<>();
+    private Map<String, List<Film>> dataFilmByGenre = new HashMap<>();
     
     private static String csvPath = "../FilmJava/project/Film/utils/Movie.csv";
        
@@ -123,6 +124,18 @@ public class InitialData {
     
         return dataGenre;
     
+    }
+
+    public Map<String, List<Film>> initDataByGenre()
+    {
+        for (Film film : dataFilm) {
+            Genre genre = dataGenre.get(film.getNamaFilm());
+            if (genre != null) {
+                dataFilmByGenre.computeIfAbsent(genre.getNamaGenre(), k -> new ArrayList<>()).add(film);
+            }
+        }
+        return dataFilmByGenre;
+
     }
     
 
