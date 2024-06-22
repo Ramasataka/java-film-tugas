@@ -31,7 +31,6 @@ public class MenuFilm {
         this.penggunaAktif = pengguna;
         this.dataFilmByGenre = dataFilmByGenre;
         this.menu = menu;
-        
     }
 
 
@@ -97,13 +96,13 @@ public class MenuFilm {
         }
         
 
-
+        this.menuWatchlist = new MenuWatchlist(dataFilm, movieArtistsMap, dataGenre, penggunaAktif, dataFilmByGenre, menu);;
 
         System.out.println("=========================");
         System.out.println("Pilih Menu");
-        System.out.println("1. Home");
-        System.out.println("2. Lihat Sesuai genre");
-        System.out.println("3. WatchList Menu");
+        System.out.println("1. Lihat Sesuai Genre");
+        System.out.println("2. Watchlist Menu");
+        System.out.println("0. Menu");
 
         System.out.print("Input : ");
 
@@ -112,13 +111,13 @@ public class MenuFilm {
 
         switch (pilih) {
             case 1:
-                menu.startMenu();
-                break;
-            case 2:
                 pilihGenre();
                 break;
-            case 0:
+            case 2:
                 menuWatchlist.watchListMenu();
+                break;
+            case 0:
+                menu.startMenu();
                 break;
             default:
                 System.out.println("Pilihan tidak valid.");
@@ -134,11 +133,9 @@ public class MenuFilm {
             System.out.println((i + 1) + ". " + genreList.get(i));
         }
 
-        // Prompt user to select a genre
         System.out.print("Pilih genre: ");
         int genreChoice = input.nextInt();
-        input.nextLine(); // Consume newline character
-
+        input.nextLine(); 
         if (genreChoice < 1 || genreChoice > genreList.size()) {
             System.out.println("Choice Salah Pilih Ulang");
             System.exit(0);
@@ -191,7 +188,7 @@ public class MenuFilm {
 
         System.out.print("Input : ");
 
-        this.menuWatchlist = new MenuWatchlist(dataFilm, movieArtistsMap, dataGenre, penggunaAktif, dataFilmByGenre, menu);
+        this.menuWatchlist = new MenuWatchlist(dataFilm, movieArtistsMap, dataGenre, penggunaAktif, dataFilmByGenre, menu);;
         pilih = input.nextInt();
         input.nextLine();
 
