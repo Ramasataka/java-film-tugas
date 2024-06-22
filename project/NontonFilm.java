@@ -46,7 +46,7 @@ public class NontonFilm{
     {
         ScreenClearner.clearConsole();
         String username, password;
-        System.out.println("SINI LOGIN DULU");
+        System.out.println("Silakan Login Terlebih Dahulu");
         System.out.print("Username : ");
         username = input.nextLine();
         System.out.print("Password : ");

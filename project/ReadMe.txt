@@ -11,6 +11,6 @@ Tambahan fitur yang dibuat (bila ada). :Hapus watchlist dan login. (????? MAKSUD
 
 Fitur yang tidak terselesaikan (bila ada) : FILM BISA DI KATEGORIIN BY GENRE ( Mau dibuat tunggu lagi sehari)
 
-Kendala saat pengerjaan project : ???? APA MEKI, ??????
+Kendala saat pengerjaan project : ???? ??????
 
 
